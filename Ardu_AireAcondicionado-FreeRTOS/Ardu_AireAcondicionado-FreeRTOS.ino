@@ -93,9 +93,6 @@ void setup() {
 void loop()
 {}
 
-/*--------------------------------------------------*/
-/*---------------------- Tasks ---------------------*/
-/*--------------------------------------------------*/
 
 void on_off( void *pvParameters )  // This is a Task.
 {
@@ -261,11 +258,11 @@ void Actuador(void * pvParameters) {
          {
             if(digitalRead(13) == LOW){            
               digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)  
-              Serial.println("Aire prendido");
+              Serial.println("Aire prendido on");
             }                        
             else{            
               digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW 
-              Serial.println("Aire Apagado");
+              Serial.println("Aire Apagado off");
             }             
             
             vTaskDelay( 1000 / portTICK_PERIOD_MS ); // wait for one second                 
@@ -275,11 +272,11 @@ void Actuador(void * pvParameters) {
          {
             if(digitalRead(12) == LOW){            
               digitalWrite(12, HIGH);   // turn the LED on (HIGH is the voltage level)  
-              Serial.println("Vel Baja");
+              Serial.println("Velocidad Baja");
             }                        
             else{            
               digitalWrite(12, LOW);    // turn the LED off by making the voltage LOW 
-              Serial.println("Vel Alta");
+              Serial.println("Velocidad Alta");
             }             
             
             vTaskDelay( 1000 / portTICK_PERIOD_MS ); // wait for one second                 
@@ -289,11 +286,11 @@ void Actuador(void * pvParameters) {
          {
             if(digitalRead(11) == LOW){            
               digitalWrite(11, HIGH);   // turn the LED on (HIGH is the voltage level)  
-              Serial.println("Bomba prendida");
+              Serial.println("Bomba prendida on");
             }                        
             else{            
               digitalWrite(11, LOW);    // turn the LED off by making the voltage LOW 
-              Serial.println("Bomba apagada");
+              Serial.println("Bomba apagada off");
             }             
             
             vTaskDelay( 1000 / portTICK_PERIOD_MS ); // wait for one second                 
@@ -304,7 +301,7 @@ void Actuador(void * pvParameters) {
             //if(digitalRead(11) == LOW){            
               digitalWrite(11, HIGH);   // turn the LED on (HIGH is the voltage level) 
               digitalWrite(12, LOW); 
-              Serial.println("Vel Baja con Bomba prendida");
+              Serial.println("Velocidad Baja con Bomba prendida");
             //}                        
             
             vTaskDelay( 1000 / portTICK_PERIOD_MS ); // wait for one second                 
@@ -315,7 +312,7 @@ void Actuador(void * pvParameters) {
             //if(digitalRead(11) == LOW){            
               digitalWrite(11, HIGH);   // turn the LED on (HIGH is the voltage level) 
               digitalWrite(12, HIGH); 
-              Serial.println("Vel Alta con Bomba prendida");
+              Serial.println("Velocidad Alta con Bomba prendida");
             //}                        
             
             vTaskDelay( 1000 / portTICK_PERIOD_MS ); // wait for one second                 
